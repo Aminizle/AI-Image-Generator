@@ -8,6 +8,10 @@ function Home() {
 
   const [searchText, setSearchText] = useState("");
 
+  const RenderCards = ({data, title}) => {
+    if (data?.length > 0) return data.map((post) => <Card keyu={post.id} {...post} />) 
+  }
+
   return (
     <section className="max-w-7xl">
       <div>
@@ -37,6 +41,9 @@ function Home() {
                 <span className="text-[#222328]">{searchText}</span>
               </h2>
             )}
+            <div className="grid lg:grid-cold-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
+
+            </div>
           </>
         )}
       </div>
